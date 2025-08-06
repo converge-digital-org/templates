@@ -1,0 +1,180 @@
+{
+    "mappings": [
+        {
+            "to": "event_source_url",
+            "from": "PAGE_URL",
+            "type": "standard"
+        },
+        {
+            "to": "event_id",
+            "from": "UUID",
+            "type": "standard"
+        },
+        {
+            "to": "action_source",
+            "type": "static",
+            "value": "website",
+            "valueType": "STRING"
+        },
+        {
+            "to": "user_data.ln",
+            "from": "LAST_NAME",
+            "type": "standard"
+        },
+        {
+            "to": "user_data.fn",
+            "from": "FIRST_NAME",
+            "type": "standard"
+        },
+        {
+            "to": "user_data.country",
+            "from": "COUNTRY_CODE",
+            "type": "standard"
+        },
+        {
+            "to": "user_data.external_id",
+            "from": "EXTERNAL_ID",
+            "type": "standard"
+        },
+        {
+            "to": "user_data.client_ip_address",
+            "from": "IP_ADDRESS",
+            "type": "standard"
+        },
+        {
+            "to": "user_data.client_user_agent",
+            "from": "USER_AGENT",
+            "type": "standard"
+        },
+        {
+            "to": "user_data.fbc",
+            "from": "FBC",
+            "type": "standard"
+        },
+        {
+            "to": "user_data.fbp",
+            "from": "FBP",
+            "type": "standard"
+        },
+        {
+            "to": "custom_data.search_string",
+            "from": "PAGE_SEARCH",
+            "type": "standard"
+        },
+        {
+            "to": "referrer_url",
+            "from": "PAGE_REFERRER",
+            "type": "standard"
+        },
+        {
+            "to": "custom_data.num_items",
+            "from": "QUANTITY",
+            "type": "standard"
+        },
+        {
+            "to": "custom_data.content_type",
+            "from": "CONTENT_TYPE",
+            "type": "standard"
+        },
+        {
+            "to": "custom_data.content_ids",
+            "from": "CONTENT_IDS",
+            "type": "standard"
+        },
+        {
+            "to": "custom_data.contents",
+            "from": "CONTENTS",
+            "type": "standard"
+        },
+        {
+            "to": "custom_data.value",
+            "from": "VALUE",
+            "type": "standard"
+        },
+        {
+            "to": "custom_data.currency",
+            "from": "CURRENCY",
+            "type": "standard"
+        },
+        {
+            "type": "standard",
+            "from": "EMAIL",
+            "to": "user_data.em"
+        },
+        {
+            "type": "standard",
+            "from": "PHONE_NUMBER",
+            "to": "user_data.ph"
+        },
+        {
+            "type": "standard",
+            "from": "BIRTHDAY",
+            "to": "user_data.db"
+        },
+        {
+            "type": "standard",
+            "from": "GENDER",
+            "to": "user_data.ge"
+        },
+        {
+            "to": "user_data.zp",
+            "type": "standard",
+            "from": "ZIP_CODE"
+        }
+    ],
+    "eventName": "InitiateCheckout",
+    "timestamp": {
+        "from": "TIMESTAMP"
+    },
+    "actionSource": "website",
+    "configVersion": 1,
+    "customMappings": [
+        {
+            "to": "integration",
+            "type": "static",
+            "value": "tixr_sync",
+            "valueType": "STRING"
+        },
+        {
+            "to": "event_timestamp",
+            "from": "TIMESTAMP",
+            "type": "standard"
+        },
+        {
+            "to": "sync_timestamp",
+            "type": "variable",
+            "variable": "current-timestamp"
+        },
+        {
+            "to": "ht_model_id",
+            "type": "variable",
+            "variable": "model-id"
+        },
+        {
+            "to": "ht_model_name",
+            "type": "variable",
+            "variable": "model-name"
+        },
+        {
+            "to": "page_title",
+            "from": "PAGE_TITLE",
+            "type": "standard"
+        },
+        {
+            "to": "page_url",
+            "type": "standard",
+            "from": "PAGE_URL"
+        },
+        {
+            "to": "page_referrer",
+            "from": "PAGE_REFERRER",
+            "type": "standard"
+        },
+        {
+            "from": "PAGE_SEARCH",
+            "to": "page_search",
+            "type": "standard"
+        }
+    ],
+    "allowHistoricalEvents": true
+}
